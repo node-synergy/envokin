@@ -1,42 +1,56 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "target": "ES2022",
-        "module": "NodeNext", 
-        "moduleResolution": "NodeNext", 
-        "resolveJsonModule": true, 
-        "strict": true, 
-        "composite": true,
-        "alwaysStrict": true, 
-        "noImplicitAny": true, 
-        "noImplicitThis": true, 
-        "noUnusedLocals": true,
-        "strictNullChecks": true, 
-        "noImplicitReturns": true,
-        "noImplicitOverride": true,
-        "strictFunctionTypes": true, 
-        "strictBindCallApply": true, 
-        "allowUnreachableCode": false,
-        "noUncheckedIndexedAccess": true,
-        "exactOptionalPropertyTypes": true,
-        "noFallthroughCasesInSwitch": true,
-        "useUnknownInCatchVariables": true,
-        "strictPropertyInitialization": true, 
-        "noPropertyAccessFromIndexSignature": true,
-        "emitDecoratorMetadata": true, 
-        "experimentalDecorators": true, 
-        "useDefineForClassFields": true, 
-        "skipLibCheck": true, 
-        "removeComments": true, 
-        "preserveConstEnums": true,
-        "disableSizeLimit": true,
-        "esModuleInterop": true, 
-        "isolatedModules": true,
-        "verbatimModuleSyntax": true,
-        "allowSyntheticDefaultImports": true, 
-        "forceConsistentCasingInFileNames": true, 
-    },
-    "exclude": [
-        "node_modules"
-    ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "strict": true,
+    "composite": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": true,
+    "strictPropertyInitialization": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "disableSizeLimit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "#lib/*": [
+        "./src/*"
+      ],
+      "#core/*": [
+        "./src/core/*"
+      ],
+      "#types/*": [
+        "./src/types/*"
+      ],
+      "#utils/*": [
+        "./src/utils/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
 }

@@ -23,6 +23,12 @@
   "type": "module",
   "author": "Elkost",
   "license": "MIT",
+  "imports": {
+    "#lib/*": "./lib/*",
+    "#core/*": "./lib/core/*",
+    "#types/*": "./lib/types/*",
+    "#utils/*": "./lib/utils/*"
+  },
   "devDependencies": {
     "@node-synergy/eslint": "github:node-synergy/eslint",
     "@types/node": "^20.14.9",
