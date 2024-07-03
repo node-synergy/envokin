@@ -1,0 +1,32 @@
+{
+  "name": "envokin",
+  "version": "0.0.0",
+  "description": "Envokin is a powerful and intuitive environment variable validation library for Node.js applications. Designed to ensure the integrity and correctness of your environment configurations, Envokin simplifies the process of validating environment variables, making your application more robust and secure.",
+  "main": "bin/index.js",
+  "types": "bin/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib && tsc --build tsconfig.build.json "
+  },
+  "keywords": [
+    ".env",
+    "envokin",
+    "validation",
+    "environment"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-synergy/envokin"
+  },
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "type": "module",
+  "author": "Elkost",
+  "license": "MIT",
+  "devDependencies": {
+    "@node-synergy/eslint": "github:node-synergy/eslint",
+    "@types/node": "^20.14.9",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.3"
+  }
+}
