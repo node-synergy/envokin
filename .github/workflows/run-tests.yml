@@ -21,7 +21,7 @@ jobs:
         node-version: '20.15.0' # Убедитесь, что используется версия Node.js 18 или выше
 
     - name: Install dependencies
-      run: npm install
+      run: npm install -f
 
     - name: Run tests
       run: npm test
