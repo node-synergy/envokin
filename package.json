@@ -2,10 +2,12 @@
   "name": "envokin",
   "version": "0.0.0",
   "description": "Envokin is a powerful and intuitive environment variable validation library for Node.js applications. Designed to ensure the integrity and correctness of your environment configurations, Envokin simplifies the process of validating environment variables, making your application more robust and secure.",
-  "main": "bin/index.js",
-  "types": "bin/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && tsc --build tsconfig.build.json "
+    "lint": "eslint .",
+    "test": "tsx --test \"tests/**/*.spec.ts\"",
+    "build": "rimraf lib && tsc --build tsconfig.build.json"
   },
   "keywords": [
     ".env",
@@ -26,13 +28,18 @@
   "imports": {
     "#lib/*": "./lib/*",
     "#core/*": "./lib/core/*",
-    "#types/*": "./lib/types/*",
-    "#utils/*": "./lib/utils/*"
+    "#types/*": "./lib/types/*"
   },
   "devDependencies": {
-    "@node-synergy/eslint": "github:node-synergy/eslint",
+    "@eslint/js": "^9.6.0",
     "@types/node": "^20.14.9",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.6.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "rimraf": "^5.0.7",
-    "typescript": "^5.5.3"
+    "tsx": "^4.16.2",
+    "type-fest": "^4.21.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.15.0"
   }
 }
