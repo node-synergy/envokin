@@ -11,17 +11,17 @@ import type {
 } from '#types/index.js';
 
 export class Envokin<Schema extends TSchema = TSchema> {
-	private readonly loader?: Loader;
 	private readonly environment: TEnvironment<Schema>;
 
 	public constructor (schema: Schema, options?: IEnvokinOptions) {
 		const source = options?.source || process.env;
-		if (typeof source === 'string')
-			this.loader = new Loader(resolve(source));
+		const loader = typeof source === 'string'
+			? new Loader(resolve(source))
+			: undefined;
 
-		const environment = !this.loader
-			? source as UnknownRecord
-			: this.loader.load();
+		const environment = loader
+			? loader.load()
+			: source as UnknownRecord;
 
 		const parsedEnvironment = new SchemaValidator(schema, options?.strict)
 			.validateAndTransform(environment);
