@@ -1,0 +1,1 @@
+throw new Error('Unsupported file type');
