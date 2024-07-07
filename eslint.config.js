@@ -1,4 +1,6 @@
 import eslint from '@eslint/js';
+import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylisticTs from '@stylistic/eslint-plugin-ts';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tslint from 'typescript-eslint';
 
@@ -17,36 +19,12 @@ export default tslint.config(
 			}
 		},
 		plugins: {
+			'@stylistic/js': stylisticJs,
+			'@stylistic/ts': stylisticTs,
 			'simple-import-sort': simpleImportSort
 		},
 		rules: {
-			'@typescript-eslint/ban-ts-comment': 'off',
-			'@typescript-eslint/explicit-function-return-type': 'error',
-			'@typescript-eslint/explicit-member-accessibility': [
-				'error',
-				{
-					'accessibility': 'explicit'
-				}
-			],
-			'@typescript-eslint/explicit-module-boundary-types': 'error',
-			'@typescript-eslint/no-empty-function': 'off',
-			'@typescript-eslint/no-explicit-any': [
-				'error',
-				{
-					ignoreRestArgs: true
-				}
-			],
-			'@typescript-eslint/no-extra-semi': 'error',
-			'@typescript-eslint/no-non-null-assertion': 'off',
-			'@typescript-eslint/no-unused-vars': [
-				'warn',
-				{
-					argsIgnorePattern: '^_',
-					varsIgnorePattern: '^_'
-				}
-			],
-			'accessor-pairs': 'off',
-			'array-bracket-spacing': [
+			'@stylistic/js/array-bracket-spacing': [
 				'error',
 				'always',
 				{
@@ -55,60 +33,41 @@ export default tslint.config(
 					arraysInArrays: true
 				}
 			],
-			'arrow-body-style': [ 'error', 'as-needed' ],
-			'arrow-parens': [ 'error', 'as-needed' ],
-			'arrow-spacing': [
+			'@stylistic/js/arrow-parens': [ 'error', 'as-needed' ],
+			'@stylistic/js/arrow-spacing': [
 				'error',
 				{
 					before: true,
 					after: true
 				}
 			],
-			'brace-style': [
+			'@stylistic/js/brace-style': [
 				'error',
 				'1tbs',
 				{
 					allowSingleLine: true
 				}
 			],
-			'comma-dangle': [
-				'error',
-				{
-					arrays: 'never',
-					objects: 'never',
-					imports: 'never',
-					exports: 'never',
-					functions: 'never'
-				}
-			],
-			'comma-spacing': [
+			'@stylistic/js/comma-dangle': [ 'error', 'never' ],
+			'@stylistic/js/comma-spacing': [
 				'error',
 				{
 					before: false,
 					after: true
 				}
 			],
-			'comma-style': [ 'error', 'last' ],
-			'computed-property-spacing': [
+			'@stylistic/js/comma-style': [ 'error', 'last' ],
+			'@stylistic/js/computed-property-spacing': [
 				'error',
 				'never',
 				{
 					enforceForClassMembers: true
 				}
 			],
-			'consistent-return': 'off',
-			curly: [ 'error', 'multi-or-nest' ],
-			'default-case': 'off',
-			'default-case-last': 'error',
-			'default-param-last': 'error',
-			'dot-notation': 'off',
-			'eol-last': [ 'error', 'never' ],
-			eqeqeq: [ 'error', 'always' ],
-			'func-call-spacing': [ 'error', 'never' ],
-			'func-name-matching': 'error',
-			'function-call-argument-newline': [ 'error', 'consistent' ],
-			'grouped-accessor-pairs': 'error',
-			indent: [
+			'@stylistic/js/eol-last': [ 'error', 'never' ],
+			'@stylistic/js/function-call-spacing': [ 'error', 'never' ],
+			'@stylistic/js/function-call-argument-newline': [ 'error', 'consistent' ],
+			'@stylistic/js/indent': [
 				'error',
 				'tab',
 				{
@@ -126,7 +85,7 @@ export default tslint.config(
 					]
 				}
 			],
-			'key-spacing': [
+			'@stylistic/js/key-spacing': [
 				'error',
 				{
 					beforeColon: false,
@@ -134,21 +93,100 @@ export default tslint.config(
 					mode: 'strict'
 				}
 			],
-			'keyword-spacing': [
+			'@stylistic/js/keyword-spacing': [
 				'error',
 				{
 					before: true,
 					after: true
 				}
 			],
-			'linebreak-style': [ 'error', 'unix' ],
-			'lines-between-class-members': [
+			'@stylistic/js/linebreak-style': [ 'error', 'unix' ],
+			'@stylistic/js/lines-between-class-members': [
 				'error',
 				'always',
 				{
 					exceptAfterSingleLine: true
 				}
 			],
+			'@stylistic/js/no-mixed-spaces-and-tabs': 'error',
+			'@stylistic/js/no-multi-spaces': 'error',
+			'@stylistic/js/no-multiple-empty-lines': [
+				'error',
+				{
+					max: 1
+				}
+			],
+			'@stylistic/js/no-trailing-spaces': 'error',
+			'@stylistic/js/no-whitespace-before-property': 'error',
+			'@stylistic/js/object-curly-newline': [
+				'error',
+				{
+					multiline: true,
+					consistent: true
+				}
+			],
+			'@stylistic/js/object-curly-spacing': [ 'error', 'always' ],
+			'@stylistic/js/object-property-newline': [
+				'error',
+				{
+					allowMultiplePropertiesPerLine: true
+				}
+			],
+			'@stylistic/js/padded-blocks': [ 'error', 'never' ],
+			'@stylistic/js/quotes': [ 'error', 'single' ],
+			'@stylistic/js/rest-spread-spacing': [ 'error', 'never' ],
+			'@stylistic/js/semi': [ 'error', 'always' ],
+			'@stylistic/js/space-before-function-paren': [
+				'error',
+				{
+					anonymous: 'always',
+					named: 'always',
+					asyncArrow: 'always'
+				}
+			],
+			'@stylistic/js/space-in-parens': [ 'error', 'never' ],
+			'@stylistic/ts/space-before-blocks': 'error',
+			'@stylistic/ts/type-annotation-spacing': [
+				'error',
+				{
+					after: true
+				}
+			],
+			'@typescript-eslint/ban-ts-comment': 'off',
+			'@typescript-eslint/explicit-function-return-type': 'error',
+			'@typescript-eslint/explicit-member-accessibility': [
+				'error',
+				{
+					'accessibility': 'explicit'
+				}
+			],
+			'@typescript-eslint/explicit-module-boundary-types': 'error',
+			'@typescript-eslint/no-empty-function': 'off',
+			'@typescript-eslint/no-explicit-any': [
+				'error',
+				{
+					ignoreRestArgs: true
+				}
+			],
+			'@typescript-eslint/no-non-null-assertion': 'off',
+			'@typescript-eslint/no-unused-vars': [
+				'warn',
+				{
+					argsIgnorePattern: '^_',
+					varsIgnorePattern: '^_'
+				}
+			],
+			'accessor-pairs': 'off',
+			'arrow-body-style': [ 'error', 'as-needed' ],
+			'consistent-return': 'off',
+			curly: [ 'error', 'multi-or-nest' ],
+			'default-case': 'off',
+			'default-case-last': 'error',
+			'default-param-last': 'error',
+			'dot-notation': 'off',
+			eqeqeq: [ 'error', 'always' ],
+			'func-name-matching': 'error',
+			'grouped-accessor-pairs': 'error',
 			'no-await-in-loop': 'error',
 			'no-constructor-return': 'error',
 			'no-duplicate-imports': [
@@ -159,54 +197,17 @@ export default tslint.config(
 			],
 			'no-global-assign': 'error',
 			'no-irregular-whitespace': 'error',
-			'no-mixed-spaces-and-tabs': 'error',
-			'no-multi-spaces': 'error',
-			'no-multiple-empty-lines': [
-				'error',
-				{
-					max: 1
-				}
-			],
 			'no-promise-executor-return': 'error',
 			'no-return-assign': [ 'error', 'except-parens' ],
 			'no-self-compare': 'error',
 			'no-template-curly-in-string': 'error',
-			'no-trailing-spaces': 'error',
 			'no-unmodified-loop-condition': 'error',
 			'no-unreachable-loop': 'error',
 			'no-unused-private-class-members': 'error',
-			'no-whitespace-before-property': 'error',
-			'object-curly-newline': [
-				'error',
-				{
-					multiline: true,
-					consistent: true
-				}
-			],
-			'object-curly-spacing': [ 'error', 'always' ],
-			'object-property-newline': [
-				'error',
-				{
-					allowMultiplePropertiesPerLine: true
-				}
-			],
 			'object-shorthand': [ 'warn', 'properties' ],
-			'padded-blocks': [ 'error', 'never' ],
 			'prefer-arrow-callback': 'error',
-			quotes: [ 'error', 'single' ],
-			'rest-spread-spacing': [ 'error', 'never' ],
-			semi: [ 'error', 'always' ],
 			'simple-import-sort/imports': 'error',
 			'simple-import-sort/exports': 'error',
-			'space-before-function-paren': [
-				'error',
-				{
-					anonymous: 'always',
-					named: 'always',
-					asyncArrow: 'always'
-				}
-			],
-			'space-in-parens': [ 'error', 'never' ],
 			yoda: [ 'error', 'never' ]
 		}
 	}
