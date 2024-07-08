@@ -64,7 +64,7 @@ export default tslint.config(
 					enforceForClassMembers: true
 				}
 			],
-			'@stylistic/js/eol-last': [ 'error', 'never' ],
+			'@stylistic/js/eol-last': [ 'error', 'always' ],
 			'@stylistic/js/function-call-spacing': [ 'error', 'never' ],
 			'@stylistic/js/function-call-argument-newline': [ 'error', 'consistent' ],
 			'@stylistic/js/indent': [
