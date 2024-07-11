@@ -42,4 +42,4 @@ envokin.get('PORT'); // -> A number value containing a valid port
 envokin.isDev; // true if NODE_ENV === 'dev' | 'develop' | 'development'
 envokin.isTest; // true if NODE_ENV === 'test' | 't'
 envokin.isProduction; // true if NODE_ENV == 'production' | 'prod'
-...
+```
